@@ -5,11 +5,11 @@ def analyze_business_lead(company_name, description):
     
     # 1. OpenRouter Configuration
     # Swap out the key below with your fresh OpenRouter key if needed!
-    api_key = "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"
+ 
     url = "https://openrouter.ai/api/v1/chat/completions"
     
     headers = {
-        "Authorization": f"Bearer {api_key}",
+        "Authorization": f"Bearer {}",
         "Content-Type": "application/json"
     }
     
@@ -20,7 +20,6 @@ def analyze_business_lead(company_name, description):
         "and a compelling 2-sentence Sales Pitch offering AI solutions."
     )
     
-    # 3. Crafting the User Prompt (Injecting the raw business inputs)
     user_input_prompt = f"Company Name: {company_name}\nBusiness Description: {description}"
     
     payload = {
